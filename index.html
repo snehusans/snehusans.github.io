@@ -1,0 +1,926 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/static/imgs/t_logo.png" type="image/png">
+   
+    <title>snehusan demo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/index .css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+     <!-- Bootstrap JS and dependencies -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    
+     <!-- Bootstrap JS and Dependencies -->
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+ 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+ <!-- Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+<!-- Slick Carousel JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Ensure jQuery is loaded -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> <!-- Ensure Slick Carousel is loaded -->
+</head>
+
+<body>
+
+   <!-- Navbar -->
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <div class="logo-container">
+                <a href="/">
+                    <img src="/static/imgs/s_logo.png" alt="logo" height="60">
+                </a>
+            </div>
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home" onclick="showSection('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" onclick="showSection('about')">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#service1" onclick="showSection('service1')">Oracle Advisory Services</a>
+                        <a class="dropdown-item" href="#service2" onclick="showSection('service2')">IT Delivery Services – Oracle</a>
+                        <a class="dropdown-item" href="#service3" onclick="showSection('service3')">Re-Architecting Oracle Landscape</a>
+                        <a class="dropdown-item" href="#service4" onclick="showSection('service4')">IT Delivery Services – Open Source & Others</a>
+                        <a class="dropdown-item" href="#service5" onclick="showSection('service5')">Marketplace for IT Services</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#contact" onclick="showSection('contact')">Contact</a></li>
+              <!--  <li class="nav-item"><a href="/login" class="btn btn-dark">Login</a></li>-->
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Sections -->
+
+    
+   <!-- Home Section -->
+<div id="home" class="section-content active hero">
+    <div class="hero-content">
+        <h1 class="typewriter">Welcome to Snehusan Software Services, LLP</h1>
+
+        <p>Your trusted partner for IT solutions. We help align your business goals with strategic technology solutions.</p>
+     <!--    <p><strong>Our Expertise Includes:</strong></p>
+        <ul>
+            <li>Oracle Technology Solutions</li>
+            <li>Open Source & Database Migration</li>
+            <li>AI & Advanced Integrations</li>
+        </ul>-->
+        <a href="#hcwhu" class="btn btn-light">How can we help you?</a>
+        <script>
+            document.querySelector('a[href="#hcwhu"]').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                const target = document.querySelector('#hcwhu');
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Smooth scroll to the target
+            });
+        </script>
+
+        <a href="#about" onclick="showSection('about')" class="btn btn-primary">Learn More About Us</a>
+    </div>
+
+<!-- What We Do Section -->
+        <div class="mt-5">
+            <section id="iot-dashboards" class="iot-dashboards">
+                <div class="container">
+                    <h2 class="text-center">What we do ?<h3>Empowering businesses through innovative solutions and creative strategies.</h3></h2>
+                </div>
+            <br>
+                <div class="list-group-wrapper">
+                    <div class="row justify-content-center align-items-start">
+                        <div class="col-md-4 col-12">
+                            <div class="list-group" id="list-tab" role="presentation">
+                                <a class="list-group-item list-group-item-action" id="list-smart-metering" data-bs-toggle="tab" role="tab" onclick="showInfo('smartMeteringInfo')">
+                                    <div class="d-flex align-items-center">
+                                        <i class="flaticon-wifi-router"></i>
+                                        <span>Advisory Services</span>
+                                    </div>
+                                </a>
+                                <div id="smartMeteringInfo" class="info-box" style="display: none;">
+                                    <p>Our expert advisory services assist clients with Oracle technology, multi-cloud adoption, and compliance, offering customized strategies for unique needs.</p>
+            
+                                </div>
+            
+                                <a class="list-group-item list-group-item-action" id="list-smart-energy" data-bs-toggle="tab" role="tab" onclick="showInfo('smartEnergyInfo')">
+                                    <div class="d-flex align-items-center">
+                                        <i class="flaticon-parking"></i>
+                                        <span>Platform Agnostic Solutions</span>
+                                    </div>
+                                </a>
+                                <div id="smartEnergyInfo" class="info-box" style="display: none;">
+                                    <p>We deliver technology solutions across various platforms, empowering clients with flexible and scalable options to suit diverse requirements.</p>
+            
+                                </div>
+            
+                                <a class="list-group-item list-group-item-action" id="list-fleet-management" data-bs-toggle="tab" role="tab" onclick="showInfo('fleetManagementInfo')">
+                                    <div class="d-flex align-items-center">
+                                        <i class="flaticon-windscreen"></i>
+                                        <span>Partner Ecosystem</span>
+                                    </div>
+                                </a>
+                                <div id="fleetManagementInfo" class="info-box" style="display: none;">
+                                    <p> Provide customers with suitable Partner with right choice of services & products.</p>
+            
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-4 col-10 text-center">
+                            <div id="dashboard-image" class="mt-0">
+                                <img src="/static/imgs/iot-dash3.jpg" class="img-fluid rounded" alt="Smart Metering IoT Dashboard" id="current-dashboard" style="width: 100%; height: auto; max-height: 400px;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            
+            <script>
+                function showInfo(infoType) {
+                    const infoBoxes = document.querySelectorAll('.info-box');
+                    
+                    // Toggle visibility of the selected info box
+                    infoBoxes.forEach(box => {
+                        if (box.id === infoType) {
+                            box.style.display = box.style.display === 'block' ? 'none' : 'block';
+                        } else {
+                            box.style.display = 'none'; // Close others
+                        }
+                    });
+            
+                    // Update active class
+                    const listItems = document.querySelectorAll('.list-group-item');
+                    listItems.forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    document.getElementById('list-' + infoType).classList.add('active');
+                }
+            </script>
+            
+            <style>
+       
+                .iot-dashboards {
+                    background-color: #f9f9f9; /* Light background for contrast */
+                    padding: 40px 0; /* Padding around the section */
+                }
+            
+                h2 {
+                    margin-bottom: 20px; /* Space below title */
+                    font-size: 2rem; /* Font size */
+                    color:  #0034d0; /* Dark color for readability */
+                }
+            
+                .list-group-item {
+                    transition: background-color 0.3s, color 0.3s;
+                    border-radius: 5px; /* Rounded corners */
+                    padding: 15px; /* Padding for better click area */
+                }
+            
+                .list-group-item.active {
+                    background-color: #007bff; /* Active state color */
+                    color: white; /* Change text color for better contrast */
+                }
+            
+                .list-group-item:hover {
+                    background-color: #0056b3; /* Hover color */
+                    color: white; /* Text color on hover */
+                }
+            
+                .info-box {
+                    margin-top: 10px; /* Space above info box */
+                    padding: 10px; /* Padding for info box */
+                    background-color: #e9ecef; /* Light background for info box */
+                    border-radius: 5px; /* Rounded corners for info box */
+                }
+            </style>
+            
+        </div>
+
+        <!-- How Can We Help You Section -->
+        <div class="mt-5">
+            <section class="feature bg-light" id="hcwhu">
+                <div class="container">
+                    <h2 class="text-center mb-4">How can we help you?</h2>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="text-center">
+                            <img src="/static/imgs/comp.png" alt="Flexible APIs Icon" class="img-fluid mb-3">
+                            <h3>Compliance</h3>
+                            <p>Ensuring your technology complies with all necessary regulations, offering peace of mind and safeguarding your business interests.</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/static/imgs/sssss1.png" alt="QR Code Generation Icon" class="img-fluid mb-3">
+                            <h3>Technology</h3>
+                            <p>Advanced technology consulting for robust architecture, cloud strategies, and performance optimization.</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/static/imgs/nego1.png" alt="PDF Generation Icon" class="img-fluid mb-3">
+                            <h3>Commercials</h3>
+                            <p>Guidance on commercial negotiations, helping you optimize costs and leverage Oracle agreements effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+          <br>  
+            
+        </div>
+
+        <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Go to top">↑ Top</button>
+
+      <!-- Custom JS for Back to Top Button -->
+      <script>
+        // Back to Top Button functionality
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var btn = document.getElementById("backToTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        document.getElementById("backToTopBtn").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Show Sections based on menu clicks
+        function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the clicked section
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.style.display = 'block';
+    }
+
+    // Update the URL hash to reflect the section
+    window.location.hash = sectionId;
+}
+window.onload = function() {
+    // Get the section from the URL hash
+    const sectionId = window.location.hash.substring(1); // Remove the '#' from the hash
+
+    // If there's a valid section, show it
+    if (sectionId) {
+        showSection(sectionId);
+    } else {
+        // If no hash exists, default to the home section
+        showSection('home');
+    }
+};
+
+    </script>
+
+   <!-- Footer -->
+   <footer>
+    <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</footer>
+
+    </div>
+</div>    
+<!-- About Section -->
+<div id="about" class="section-content">
+   <!-- About Us Banner -->
+<div class="about-banner-wrapper">
+    <img src="/static/imgs/ban_about.jpg" class="about-banner-img" alt="About Us Banner">
+    <div class="about-overlay"></div> <!-- Gradient overlay -->
+    <div class="about-hero-content">
+        <h1 class="animated-heading">About Us</h1> <!-- Animated text -->
+        <p class="about-tagline">Our mission is to provide exceptional service and make a meaningful impact.</p>
+    </div>
+</div>
+
+<!-- Content below the banner -->
+<div class="about-details">
+    <!-- Animated introduction -->
+    <p class="animated-fade">
+        <strong>Snehusan Software Services, LLP (S-Cube)</strong> is a software advisory and IT services firm dedicated to helping businesses adopt robust technology strategies.
+    </p>
+    <p class="animated-fade delay-2">
+        We operate as a single-window partner ecosystem, providing a comprehensive suite of services that span Oracle technology, multi-cloud strategy, open-source support, and compliance.
+    </p>
+
+    <!-- Vision and Mission -->
+    <div class="vision-mission-wrapper">
+        <div class="vision-mission-box hover-box">
+            <h3>Vision</h3>
+            <p>To be the leading provider of expert advisory services in Oracle technology, empowering businesses to thrive in a dynamic digital landscape through innovative solutions and strategic guidance.</p>
+        </div>
+        <div class="vision-mission-box hover-box">
+            <h3>Mission</h3>
+            <p>Our mission is to deliver unparalleled expertise and support in Oracle technology, covering a wide array of areas such as database management, cloud infrastructure, compliance, and optimization methodologies. Through collaborative partnerships and forward-thinking approaches, we enable our clients to achieve their goals with confidence and efficiency.</p>
+        </div>
+    </div>
+
+    <!-- Founder Section -->
+    <div class="founder-profile">
+        <img src="/static/imgs/profile.png" alt="Founder Sandesh Naik" class="founder-img"> <!-- Profile image -->
+        <div class="founder-info">
+            <h3>Founder: Sandesh Naik</h3>
+            <p>Sandesh Naik is a Seasoned Technology Professional with over 16 years in Oracle consulting and a strong presence in US and Indian markets. His experience spans telecommunications, BFSI, automotive, and more.</p>
+            <h4>Founder Profile</h4>
+            <p>
+                <strong>Experienced Technology Professional with strong exposure on Solution Consulting</strong><br>
+                <strong>16+ Years with Oracle in various roles</strong><br>
+                <strong>12+ Years in USA markets</strong><br>
+                Across Verticals: Telecommunications, BFSI, IT Services, Automotive, Manufacturing, Distribution, Education & Telemarketing.<br>
+                Lead large teams in Pre-Sales, Solution Design & IT Service Delivery.<br>
+                Strong hands-on expertise in Oracle Database & Middleware Administration, Cloud (PaaS/IaaS), and Business Applications such as ERP, HRMS, CRM, & Enterprise Content Management.<br>
+                Worked closely with large key customers to derive maximum value from their technology investments & cloud integration strategies.
+            </p>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+   <footer>
+    <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</footer>
+</div>
+
+<script>
+document.querySelector('.founder-toggle').addEventListener('click', function () {
+    const info = document.querySelector('.founder-expanded-info');
+    info.style.display = info.style.display === 'block' ? 'none' : 'block';
+});
+</script>
+
+
+
+<!-- Oracle Advisory Services -->
+<div id="service1" class="section-content">
+    <!-- Banner Section -->
+    <div class="banner-wrapper">
+        <img src="/static/imgs/ad_banner.jpg" class="banner-img" alt="Oracle Advisory Services">
+        <div class="overlay">
+            <div class="overlay-content">
+                <h1 class="overlay-title">Oracle Advisory Services</h1>
+                <p class="section-description">
+                    Empowering businesses with expert guidance on licensing, compliance, and database architecture to achieve optimal results with confidence.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic Services Section (Slick Carousel) -->
+    <div class="service-cards" style="display: none;"> <!-- Hide carousel initially -->
+        <div class="service-card">
+            <div class="card-header">
+                <h2>Compliance and Commercial Advisory</h2>
+            </div>
+            <p class="card-description">
+                Navigate Oracle's complex licensing and support policies.<br>
+                Address gaps in in-house compliance expertise.<br>
+                Defend against audit challenges and mitigate compliance risks.
+            </p>
+        </div>
+        <div class="service-card">
+            <div class="card-header">
+                <h2>Database Migration and Performance Tuning</h2>
+            </div>
+            <p class="card-description">
+                Expert advice on choosing the right Oracle DB options.<br>
+                Build secure, scalable architectures with best practices.<br>
+                Develop an effective enterprise cloud migration strategy.
+            </p>
+        </div>
+        <div class="service-card">
+            <div class="card-header">
+                <h2>Audit Defense and Security Assessment</h2>
+            </div>
+            <p class="card-description">
+                Negotiate pricing and terms with Oracle teams.<br>
+                Leverage Oracle ULA with strategic entry and exit planning.<br>
+                Ensure security and compliance at every step.
+            </p>
+        </div>
+    </div>
+
+    <div class="navigation-buttons">
+        <button class="btn btn-primary prev-service">Back</button>
+        <button class="btn btn-primary next-service">Next Service</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+</div>
+
+<!-- Slick Carousel JS Script -->
+
+
+<script type="text/javascript">
+    $(window).on('load', function() {  // Ensure page is fully loaded
+        $('.service-cards').slick({
+            infinite: true,          // Infinite loop
+            slidesToShow: 1,         // Show one card at a time
+            slidesToScroll: 1,       // Scroll one card at a time
+            dots: true,              // Show dots navigation
+            arrows: true,            // Show arrows for navigation
+            autoplay: true,          // Enable autoplay
+            autoplaySpeed: 3000,     // Autoplay interval (3 seconds)
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        // Show the carousel after it has been initialized
+        $('.service-cards').fadeIn();  // Fade in after initialization
+    });
+</script>
+
+
+
+        
+<!-- IT Delivery Services – Oracle -->
+<div id="service2" class="section-content">
+    <div class="banner-wrapper">
+        <img src="/static/imgs/it_ban.jpg" class="banner-img" alt="IT Delivery Services - Oracle">
+        <div class="overlay">
+            <h1 class="animated-title">IT Delivery Services – Oracle</h1>
+            <p class="fade-in-description">We offer Oracle Database upgrade, migration, and ongoing support services, delivering optimized and high-availability architectures for your Oracle ecosystems.</p>
+        </div>
+    </div>
+    
+    <ul class="service-list">
+        <li class="service-item">
+            <i class="fa fa-arrow-circle-up service-icon"></i>
+            <h4>Oracle Database Upgrade/Migration Execution by Experts</h4>
+            <ul>
+                <li>Certified Oracle experts ensure seamless upgrades and migrations.</li>
+                <li>Minimal downtime, data integrity, and security are maintained throughout the process.</li>
+                <li>Supports both on-premises upgrades and cloud migrations.</li>
+            </ul>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-cogs service-icon"></i>
+            <h4>DB Migration & Consolidation on Oracle Engineered Systems (On-Prem/Cloud)</h4>
+            <ul>
+                <li>Specialized migration and consolidation onto Oracle Engineered Systems.</li>
+                <li>Ensures optimal performance, scalability, and cost-efficiency on both on-premises and cloud environments.</li>
+                <li>Utilizes advanced hardware like Oracle Exadata for maximum database potential.</li>
+            </ul>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-tachometer service-icon"></i>
+            <h4>Post Upgrade Performance Tuning Assessment / Assistance</h4>
+            <ul>
+                <li>Performance tuning assessments conducted after upgrades or migrations.</li>
+                <li>Bottlenecks identified, queries optimized, and configurations adjusted for peak performance.</li>
+                <li>Helps clients maximize the value of Oracle's latest features.</li>
+            </ul>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-check-circle service-icon"></i>
+            <h4>Oracle Best Practices Implementation and Architecture Review</h4>
+            <ul>
+                <li>Implementation of industry-leading best practices for Oracle database architecture.</li>
+                <li>Comprehensive review and optimization recommendations for scalability and resilience.</li>
+                <li>Ensures that the database environment is secure, efficient, and future-proof.</li>
+            </ul>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-shield-alt service-icon"></i>
+            <h4>Oracle MAA (Maximum Availability Architecture) Solution & Implementation</h4>
+            <ul>
+                <li>Expert solutions for high availability with Oracle RAC, Golden Gate, and Active Data Guard.</li>
+                <li>Minimizes downtime and ensures data availability for critical business applications.</li>
+            </ul>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-database service-icon"></i>
+            <h4>Oracle Backup and Recovery Review and Setup Experts</h4>
+            <ul>
+                <li>Review and implementation of Oracle backup and recovery strategies using RMAN (Recovery Manager).</li>
+                <li>Ensures quick data restoration in emergencies, minimizing recovery time and risks of data loss.</li>
+            </ul>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-life-ring service-icon"></i>
+            <h4>Expert Assistance on Critical Requests</h4>
+            <ul>
+                <li>Immediate support for critical issues such as system outages, performance degradation, and troubleshooting.</li>
+                <li>Ensures minimal disruption to business operations and quick resolution of issues.</li>
+            </ul>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-lock service-icon"></i>
+            <h4>DB Security Assessment and Implementation</h4>
+            <ul>
+                <li>Security assessments to identify vulnerabilities within Oracle databases.</li>
+                <li>Implementation of advanced security solutions like Oracle Database Vault and Oracle Audit Vault.</li>
+                <li>Configures encryption, access controls, and auditing to protect sensitive data and ensure compliance with regulations.</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="navigation-buttons">
+        <button class="btn btn-primary prev-service">Previous Service</button>
+        <button class="btn btn-primary next-service">Next Service</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+</div>
+
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const serviceItems = document.querySelectorAll('.service-list li');
+    const options = { threshold: 0.5 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.8s forwards ease';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    serviceItems.forEach(item => observer.observe(item));
+});
+</script>
+
+<div id="service3" class="section-content">
+    <div class="banner-wrapper">
+        <img src="/static/imgs/arc_ban.jpg" class="banner-img" alt="Re-Architecting Oracle Landscape">
+        <div class="overlay">
+            <h1 class="animate-title">Re-Architecting Oracle Landscape</h1>
+            <p class="animate-description">Our experts help re-architect Oracle infrastructures, optimizing database options, hardware, and performance to best fit your business needs.</p>
+        </div>
+    </div>
+    <div class="service-list">
+        <div class="service-item animate-item">
+            <h4>Usage Analysis</h4>
+            <ul>
+                <li>Work with your Oracle DBA, System, and Storage Admin teams to collect regular data for resource utilization and peaks for your current DB and HW.</li>
+                <li>Plan and size future databases and hardware using this data.</li>
+            </ul>
+        </div>
+        <div class="service-item animate-item">
+            <h4>Software Analysis</h4>
+            <ul>
+                <li>Provide thorough analysis of DB Options usage and advice on which DB options to choose to best suit your Business Applications.</li>
+                <li>Ensure solutions align with performance, availability, security requirements, and license compliance.</li>
+            </ul>
+        </div>
+        <div class="service-item animate-item">
+            <h4>Hardware Analysis</h4>
+            <ul>
+                <li>Provide a complete TCO (Total Cost of Ownership) exercise for various Oracle hardware options.</li>
+                <li>Assist in optimizing hardware selection for both cost and performance (Exadata, ZDLRA, PCA, Intel, Cloud, etc.).</li>
+            </ul>
+        </div>
+        <div class="service-item animate-item">
+            <h4>Business Case</h4>
+            <ul>
+                <li>Collaborate with Oracle Technology Pre-sales to optimize the BOM and agree on proper sizing.</li>
+                <li>Present the final TCO for CXOs to make the best business-driven decision.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="navigation-buttons">
+        <button class="btn btn-primary prev-service">Previous Service</button>
+        <button class="btn btn-primary next-service">Next Service</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+</div>
+
+
+        
+       <!-- IT Delivery Services – Open Source & Others -->
+<div id="service4" class="section-content">
+    <div class="banner-wrapper">
+        <img src="/static/imgs/it1_ban.jpg" class="banner-img" alt="IT Delivery Services - Open Source">
+        <div class="overlay">
+            <h1 class="animated-title">IT Delivery Services – Open Source & Others</h1>
+            <p class="animated-description">Providing comprehensive solutions for open-source and enterprise databases, we enable seamless integration, upgrades, and optimized architectures tailored to your business needs.</p>
+        </div>
+    </div>
+    <div class="analysis-wrapper">
+        <div class="analysis-box">
+            <h4>Database Upgrade/Migration Services</h4>
+            <ul>
+                <li>Expert assistance in upgrading and migrating MS-SQL, PostgreSQL, and MongoDB databases.</li>
+                <li>Ensure smooth transitions with minimal downtime while maintaining data integrity and performance during migrations.</li>
+            </ul>
+        </div>
+        <div class="analysis-box">
+            <h4>Open-Source Database Installation</h4>
+            <ul>
+                <li>Setup and installation of open-source databases such as PostgreSQL and MongoDB with cluster configurations.</li>
+                <li>Ensure high availability and scalability for your applications with robust clustering solutions.</li>
+            </ul>
+        </div>
+        <div class="analysis-box">
+            <h4>DC-DR Architecture Implementation</h4>
+            <ul>
+                <li>Implement best practices for Data Center to Disaster Recovery (DC-DR) architectures.</li>
+                <li>Our experts review and design fail-safe architectures to ensure business continuity in the event of a disaster.</li>
+            </ul>
+        </div>
+        <div class="analysis-box">
+            <h4>Backup and Recovery Architecture</h4>
+            <ul>
+                <li>Review and set up a reliable backup and recovery strategy tailored to your database environment.</li>
+                <li>Ensure your critical data is protected and recoverable with minimal disruption to operations.</li>
+            </ul>
+        </div>
+        <div class="analysis-box">
+            <h4>Critical Request Support for NoSQL</h4>
+            <ul>
+                <li>Receive expert assistance on critical requests for NoSQL databases such as MongoDB.</li>
+                <li>Address complex issues with tailored solutions and expert guidance to keep your systems running smoothly.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="navigation-buttons">
+        <button class="btn btn-primary prev-service">Previous Service</button>
+        <button class="btn btn-primary next-service">Next Service</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+</div>
+
+
+
+<!-- Marketplace for IT Services -->
+<div id="service5" class="section-content">
+    <!-- Banner Wrapper with Overlay -->
+    <div class="banner-wrapper">
+        <img src="/static/imgs/con_ban.jpg" class="banner-img" alt="Marketplace for IT Services">
+        <div class="overlay">
+            <h1 class="dynamic-title">Marketplace for IT Services</h1>
+            <p class="fade-in-text">Our consolidation services provide a single-window solution for a range of IT services, streamlining your technology ecosystem to maximize efficiency and integration.</p>
+        </div>
+    </div>
+
+    <!-- Single Window Partner Ecosystem Section -->
+    <div id="single-window-ecosystem">
+        <h2>Single Window Partner Ecosystem</h2>
+        <p>Our Single Window Partner Ecosystem brings together a diverse range of services and partners seamlessly integrated into one robust framework.</p>
+
+        <!-- Static Diagram -->
+        <div class="diagram-container" id="diagram">
+            <img src="/static/imgs/c_logo.png" alt="Logo" class="center-logo">
+
+            <!-- Service Nodes (Partners/Services) -->
+            <div class="service-node" style="left: 180px; top: 60px;">DB / MW / OS / AS Admin & Support</div>
+            <div class="service-node" style="left: 384.84px; top: 140px;">On-Prem/Cloud & Mobile Apps</div>
+            <div class="service-node" style="left: 470px; top: 280px;">IT Recruitment & Corporate Training</div>
+            <div class="service-node" style="left: 384.84px; top: 420px;">Automated SaaS Testing Ecosystem</div>
+            <div class="service-node" style="left: 180px; top: 480px;">Connect & Integrate with AI</div>
+            <div class="service-node" style="left: 0px; top: 420px;">AI/ML, Data Science Team Setup</div>
+            <div class="service-node" style="right: 450px; top: 280px;">Application Development (.NET, Java)</div>
+            <div class="service-node" style="left: 0px; top: 140px;">Composable E-Commerce Solutions</div>
+
+            <!-- Dynamic Lines connecting the nodes -->
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(0deg);"></div>
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(45deg);"></div>
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(90deg);"></div>
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(135deg);"></div>
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(180deg);"></div>
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(225deg);"></div>
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(270deg);"></div>
+            <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(315deg);"></div>
+        </div>
+
+ <!-- Static Diagram -->
+ <div class="diagram-container" id="diagram">
+    <img src="/static/imgs/c_logo.png" alt="Logo" class="center-logo">
+
+    <!-- Service Nodes (Partners/Services) -->
+    <div class="service-node" style="left: 180px; top: 60px;">Transforming your GRC & ESG Eco-space </div>
+    <div class="service-node" style="left: 384.84px; top: 140px;">Blockchain Consulting & Development</div>
+    <div class="service-node" style="left: 470px; top: 280px;">Application Development  (SharePoint/PHP)</div>
+    <div class="service-node" style="left: 384.84px; top: 420px;">Integrated Risk & Compliance with SAM</div>
+   
+    <div class="service-node1" style="right: 250px; top: 420px;">CAST- Software Intelligence Tool which provides a 'single integrated view' 
+         of an organization's custom application portfolio, helping to address critical future issues</div>
+    <div class="service-node" style="right: 450px; top: 275px;">Tooling, Stamping,Fabricating & Machining in Manufacturing</div>
+    <div class="service-node" style="left: 0px; top: 140px;">Internet Of Things Consulting, Strategy </div>
+
+    <!-- Dynamic Lines connecting the nodes -->
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(0deg);"></div>
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(45deg);"></div>
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(90deg);"></div>
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(135deg);"></div>
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(180deg);"></div>
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(225deg);"></div>
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(270deg);"></div>
+    <div class="line" style="left: 300px; top: 300px; height: 200px; transform: rotate(315deg);"></div>
+</div>
+
+
+    </div>
+
+     <!-- Add these buttons -->
+     <div class="navigation-buttons">
+        <button class="btn btn-primary prev-service" href="#service4" onclick="showSection('service4')">Previous Service</button>
+        <button class="btn btn-primary next-service">Contact US</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+</div>
+
+
+     <!-- Contact Section -->
+<div id="contact" class="section-content" style="text-align: center; padding: 60px 20px; background: linear-gradient(45deg, #f0f8ff, #e6f7ff); border-radius: 10px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+    <!-- Animated Title -->
+    <h1 class="animated-title" style="font-size: 36px; color: #2c3e50; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-bottom: 20px; text-transform: uppercase; font-weight: bold; opacity: 0; animation: fadeInTitle 2s forwards;">
+        We'd Love to Hear From You!
+    </h1>
+
+    <p style="font-size: 20px; color: #3d4242; font-family: 'Arial', sans-serif; margin-bottom: 30px; line-height: 1.6;">
+        Have a question? Just want to say hello? We’re here to help! Feel free to get in touch with us.
+    </p>
+    
+    <!-- Icons and Contact Information -->
+    <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 40px;">
+        <!-- Email Icon and Link -->
+        <div class="contact-info" style="text-align: center; opacity: 0; animation: fadeIn 2s 1s forwards;">
+            <img src="https://img.icons8.com/ios/50/000000/email-open.png" alt="Email Icon" style="width: 50px; margin-bottom: 10px;">
+            <p style="font-size: 18px; color: #202225; font-family: 'Poppins', sans-serif;">
+                <strong>Email:</strong><br>
+                <a href="mailto:Sandesh.Naik@snehusan.com" style="color: #3498db; text-decoration: none; font-weight: bold;">Sandesh.Naik@snehusan.com</a>
+            </p>
+        </div>
+
+       
+    </div>
+
+    <div style="margin-top: 30px;">
+        <p style="font-size: 18px; color: #333434; font-family: 'Poppins', sans-serif;">
+            We can’t wait to connect with you! Let us know how we can assist you today. 😊
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 40px; text-align: center; color: #ffffff;">
+        <p>&copy; 2024 Snehusan Software Services, LLP. All rights reserved.</p>
+        <a href="#" style="color: #fefefe; text-decoration: none; margin-right: 15px;  transition: color 0.3s ease;">Privacy Policy</a> |
+        <a href="#" style="color: #ffffff; text-decoration: none;  transition: color 0.3s ease;">Terms of Service</a>
+    </footer>
+</div>
+
+        
+    </div>
+
+    <!-- JavaScript to Show/Hide Sections -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const services = [
+            "about",    // Special case: Navigate here for "Previous" from #service1
+            "service1",
+            "service2",
+            "service3",
+            "service4",
+            "service5",
+            "contact"   // Special case: Navigate here for "Next" from #service5
+        ];
+
+        // Function to display the correct section
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the target section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+
+        // Add event listeners to all navigation buttons
+        document.querySelectorAll('.navigation-buttons').forEach((navButtons, index) => {
+            const prevButton = navButtons.querySelector('.prev-service');
+            const nextButton = navButtons.querySelector('.next-service');
+
+            // Handle Previous Button Click
+            prevButton.addEventListener('click', () => {
+                if (index > 0) {
+                    const targetSection = services[index]; // Previous section
+                    showSection(targetSection);
+                    window.location.hash = `#${targetSection}`;
+                    reloadPage();
+                } else {
+                    // Special case: Navigate to "About" for the first service
+                    showSection("about");
+                    window.location.hash = "#about";
+                    reloadPage();
+                }
+            });
+
+            // Handle Next Button Click
+            nextButton.addEventListener('click', () => {
+                if (index < services.length - 2) {
+                    const targetSection = services[index + 2]; // Next section
+                    showSection(targetSection);
+                    window.location.hash = `#${targetSection}`;
+                    reloadPage();
+                } else {
+                    // Special case: Navigate to "Contact Us" for the last service
+                    showSection("contact");
+                    window.location.hash = "#contact";
+                    reloadPage();
+                }
+            });
+        });
+
+        // Function to force a page reload
+        function reloadPage() {
+            window.location.reload();
+        }
+
+        // Automatically show the correct section on page load or hash change
+        window.addEventListener("hashchange", () => {
+            const sectionId = window.location.hash.substring(1); // Get the section ID from the hash
+            showSection(sectionId);
+        });
+
+        // Show the correct section on initial page load
+        const initialSection = window.location.hash.substring(1) || "home"; // Default to service1
+        showSection(initialSection);
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+   </body>
+
+</html>
