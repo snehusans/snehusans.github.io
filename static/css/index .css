@@ -1,6 +1,5 @@
 
- 
-  .logo-container {
+.logo-container {
     display: flex;
     justify-content: left;
     margin-right: 400px;
@@ -40,7 +39,7 @@
 
 /* Hero content */
 .hero-content {
-    margin-top: 140px;
+    margin-top: 120px;
     margin-bottom: 200px;
     color: rgb(251, 250, 246);
     text-align: center;
@@ -117,31 +116,47 @@
 .navbar {
     background: linear-gradient(90deg, #ffffff, #ffffff);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px 0; /* Adjust padding for better spacing */
-    margin-right: 10px;
-    position: relative; /* Ensure proper positioning */
+    padding: 10px 20px; /* Adjust for consistent spacing */
     display: flex;
-    justify-content: space-between; /* Spread out logo and nav links */
-    align-items: center; /* Align navbar items vertically */
+    justify-content: space-between;
+    align-items: center; /* Aligns logo and button vertically */
 }
 
 /* Navbar Brand (Logo) */
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Align logo vertically with the toggler */
+}
+
 .navbar-brand img {
-    height: 65px; /* Adjust the logo size */
+    
+    height: 60px; /* Adjust the logo size */ /* Adjust the logo size */
 }
 
 /* Navbar Toggler for Mobile */
 .navbar-toggler {
-    border-color: #0b0a0a; /* Change toggler button color */
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent; /* Transparent background */
+    position: absolute; /* Position the button */
+    top: 15px; /* Align with the logo */
+    right: 20px; /* Place it near the right edge */
+    z-index: 1000; /* Ensure it stays above content */
 }
 
 .navbar-toggler-icon {
+    border-radius: 2px; /* Optional: Add slight rounding */
     padding-right: 10px;
     background-color: #959595; /* Toggler icon color */
 }
 
 /* Navbar Links */
 .navbar-nav {
+    align-items: center;
     display: flex; /* Use flexbox to align nav items */
     justify-content: flex-end; /* Align nav items to the right */
     list-style: none; /* Remove list style */
@@ -149,6 +164,7 @@
 }
 
 .navbar-nav .nav-item {
+    
     margin-left: 20px; /* Add space between nav items */
 }
 
@@ -204,13 +220,17 @@
 
 /* Mobile Adjustments */
 @media (max-width: 992px) {
-    .navbar-nav {
-        flex-direction: column; /* Stack navbar items vertically on mobile */
-        text-align: center; /* Center text for mobile */
+    .navbar {
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .navbar-brand img {
+        height: 50px; /* Slightly reduce the logo size for smaller screens */
     }
 
     .navbar-toggler {
-        background-color: #f5f5f5; /* Change toggler button color for mobile */
+        padding: 5px 8px; /* Adjust padding for better alignment */
+        right: 15px; /* Adjust horizontal alignment */
     }
 }
 
@@ -751,7 +771,8 @@
 
 /* Overlay Title with Animation */
 #service2 .overlay h1 {
-    font-size: 2.8rem;
+    margin-top: 15px;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -1096,7 +1117,8 @@
 
 /* Animated Title */
 .animated-title {
-    font-size: 3.2rem;
+    margin-top: 35px;
+    font-size: 2.1rem;
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -1107,7 +1129,7 @@
 
 /* Animated Description */
 .animated-description {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #ffffff;
     line-height: 1.8;
     font-family: 'Poppins', sans-serif;
@@ -1235,11 +1257,12 @@
 }
 
 #service5 .overlay h1 {
+    margin-top: 25px;
     font-size: 2.8rem;
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     opacity: 0;
@@ -1258,6 +1281,7 @@
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
     max-width: 800px;
+   
     opacity: 0;
     animation: fadeInText 3s forwards;
     animation-delay: 1s; /* Delay to make sure the text fades in after title */
@@ -1342,7 +1366,7 @@
     position: absolute;
     width: 2px;
     background-color: #1a176d;
-    transform-origin: top;
+    transform-origin: center top ;
     z-index: 0;
 }
 
@@ -1398,3 +1422,324 @@
 .navigation-buttons .btn:hover {
     background-color: #003f88;
 }
+
+/* General styles for large screens remain unchanged */
+
+/* Responsive Design for Small Screens (width <= 768px) */
+@media (max-width: 768px) {
+    .diagram-container {
+        width: 570px;
+        height: 570px;
+    }
+
+    .center-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Position the service nodes */
+    .service-node:nth-child(1) {
+        left: 50px;
+        top: 50px;
+    }
+
+    .service-node:nth-child(2) {
+        left: 200px;
+        top: 120px;
+    }
+
+    .service-node:nth-child(3) {
+        left: 250px;
+        top: 200px;
+    }
+
+    .service-node:nth-child(4) {
+        left: 200px;
+        top: 300px;
+    }
+
+    .service-node:nth-child(5) {
+        left: 50px;
+        top: 350px;
+    }
+
+    .service-node:nth-child(6) {
+        left: 0px;
+        top: 300px;
+    }
+
+    .service-node:nth-child(7) {
+        right: 250px;
+        top: 200px;
+    }
+
+    .service-node:nth-child(8) {
+        left: 0px;
+        top: 120px;
+    }
+
+    /* Position the lines */
+    .line:nth-child(1) {
+        height: 100px;
+        left: 250px;
+        top: 275px;
+        transform: rotate(0deg);
+    }
+
+    .line:nth-child(2) {
+        height: 100px;
+        left: 200px;
+        top: 275px;
+        transform: rotate(45deg);
+    }
+
+    .line:nth-child(3) {
+        height: 100px;
+        left: 275px;
+        top: 275px;
+        transform: rotate(90deg);
+    }
+
+    .line:nth-child(4) {
+        height: 100px;
+        left: 275px;
+        top: 275px;
+        transform: rotate(135deg);
+    }
+
+    .line:nth-child(5) {
+        height: 100px;
+        left: 275px;
+        top: 275px;
+        transform: rotate(180deg);
+    }
+
+    .line:nth-child(6) {
+        height: 100px;
+        left: 275px;
+        top: 275px;
+        transform: rotate(225deg);
+    }
+
+    .line:nth-child(7) {
+        height: 100px;
+        left: 275px;
+        top: 275px;
+        transform: rotate(270deg);
+    }
+
+    .line:nth-child(8) {
+        height: 100px;
+        left: 275px;
+        top: 275px;
+        transform: rotate(315deg);
+    }
+}
+
+
+/* Responsive Design for Small Screens (width <= 576px) */
+@media (max-width: 576px) {
+    .diagram-container {
+        width: 475px;
+        height: 475px;
+        position: relative;
+        margin: 0 auto;
+        border-radius: 50%;
+        padding: 5px 10px;
+    }
+
+    .center-logo {
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        left: 50%;
+        top: 53%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    /* Service Nodes Positioned Dynamically */
+    .service-node {
+        font-size: 12px;
+        width: 80px;
+        height: auto;
+        text-align: center;
+        position: absolute;
+        transform: translate(-35%, -80%);
+    }
+
+    .service-node1 {
+        font-size: 12px;  /* Ensure consistency with other nodes */
+        width: 160px; /* Adjust width to accommodate longer text */
+        height: auto;
+        text-align: center;
+        position: absolute;
+        transform: translate(15%, -48%); /* Same alignment for consistency */
+        right: 250px; /* Position the node from the right side */
+        top: 420px;   /* Position the node from the top */
+    }
+
+    /* Dynamic Node Positioning for 16 Nodes (Closer to the Center) */
+    .service-node:nth-child(1) {
+        left: 150%;
+        top: 150%; /* Top-center node */
+        transform: translate(-20%, -40%);
+    }
+
+    .service-node:nth-child(2) {
+        left: 70%;
+        top: 10%;
+        transform: translate(-20%, -40%);
+    }
+
+    .service-node:nth-child(3) {
+        left: 55%;
+        top: 25%;
+        transform: translate(-50%, -40%);
+    }
+
+    .service-node:nth-child(4) {
+        left: 90%;
+        top: 50%;
+        transform: translate(-90%, -80%);
+    }
+
+    .service-node:nth-child(5) {
+        left: 10%;
+        top: 75%;
+        transform: translate(-65%, -80%);
+    }
+
+    .service-node:nth-child(6) {
+        left: 70%;
+        top: 90%;
+        transform: translate(-25%, -50%);
+    }
+
+    .service-node:nth-child(7) {
+        left: 0%;
+        top: 95%; /* Bottom-center node  tooling stamping*/
+        transform: translate(-12%, -70%);
+    }
+
+    .service-node:nth-child(8) {
+        left: 0%;
+        top: 90%;/* App development*/
+        transform: translate(-15%, -60%);
+    }
+
+    .service-node:nth-child(9) {
+        left: 55%;
+        top: 75%;
+        transform: translate(-10%, -30%);
+    }
+
+    .service-node:nth-child(10) {
+        left: 10%;
+        top: 50%;
+    }
+
+    .service-node:nth-child(11) {
+        left: 15%;
+        top: 25%;
+    }
+
+    .service-node:nth-child(12) {
+        left: 70%;
+        top: 10%;
+    }
+
+    .service-node:nth-child(13) {
+        left: 40%;
+        top: 10%;
+    }
+
+    .service-node:nth-child(14) {
+        right: 140%;
+        top: 15%;
+    }
+
+    .service-node:nth-child(15) {
+        left: 40%;
+        top: 85%;
+    }
+
+    .service-node:nth-child(16) {
+        left: 60%;
+        top: 85%;
+    }
+
+  /* Hide original lines */
+  .line {
+    display: none;
+}
+
+/* New lines for 576px and below */
+.line-576 {
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 190px; /* Shorter lines for small screens */
+    background-color: #1a176d;
+    z-index: 0;
+}
+
+/* First new line (adjust the position) */
+.line-576-1 {
+    left: 50%;
+    top: 30%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+
+/* Second new line */
+.line-576-2 {
+    left: 50%;
+    top: 35%;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+
+/* Third new line */
+.line-576-3 {
+    left: 50%;
+    top: 37%;
+    transform: rotate(90deg) translate(-50%, -50%);
+}
+
+/* Fourth new line */
+.line-576-4 {
+    left: 50%;
+    top: 35%;
+    transform: rotate(135deg) translate(-50%, -50%);
+}
+
+/* Fifth new line */
+.line-576-5 {
+    left: 50%;
+    top: 40%;
+    transform: rotate(180deg) translate(-50%, -50%);
+}
+
+/* Sixth new line */
+.line-576-6 {
+    left: 50%;
+    top: 37%;
+    transform: rotate(225deg) translate(-50%, -50%);
+}
+
+/* Seventh new line */
+.line-576-7 {
+    left: 50%;
+    top: 37%;
+    transform: rotate(270deg) translate(-50%, -50%);
+}
+
+/* Eighth new line */
+.line-576-8 {
+    left: 50%;
+    top: 37%;
+    transform: rotate(315deg) translate(-50%, -50%);
+}
+}
+
+
+
