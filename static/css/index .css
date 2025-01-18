@@ -1597,7 +1597,7 @@
     /* Service Nodes Positioned Dynamically */
     .service-node {
         font-size: 8px;
-        width: 80px;
+        width: 10px;
         height: auto;
         text-align: center;
         position: absolute;
@@ -1610,7 +1610,7 @@
         height: auto;
         text-align: center;
         position: absolute;
-        transform: translate(30%, -400%); /* Same alignment for consistency */
+        transform: translate(30%, -350%); /* Same alignment for consistency */
         right: 250px; /* Position the node from the right side */
         top: 420px;   /* Position the node from the top */
     }
@@ -1619,7 +1619,7 @@
     .service-node:nth-child(1) {
         left: 0%;
         top: 50%; /* Top-center node */
-        transform: translate(-80%, 80%);
+        transform: translate(-60%, 80%);
     }
 
     .service-node:nth-child(2) {
@@ -1631,7 +1631,7 @@
     .service-node:nth-child(3) {
         left: 55%;
         top: 25%;
-        transform: translate(-110%, -250%); /*On prem and block chain*/
+        transform: translate(-120%, -250%); /*On prem and block chain*/
     }
 
     .service-node:nth-child(4) {
@@ -1643,7 +1643,7 @@
     .service-node:nth-child(5) {
         left: 10%;
         top: 75%;
-        transform: translate(-100%, -490%); /*ecosystem and compliance with sam */
+        transform: translate(-120%, -590%); /*ecosystem and compliance with sam */
     }
 
     .service-node:nth-child(6) {
@@ -1655,13 +1655,13 @@
     .service-node:nth-child(7) {
         left: 0%;
         top: 95%; /* Bottom-center node  tooling stamping and team set up*/
-        transform: translate(-25%, 30%);
+        transform: translate(-15%, 37%);
     }
 
     .service-node:nth-child(8) {
         left: 0%;
-        top: 50%;/* App development and iot consulting*/
-        transform: translate(-25%, -690%);
+        top: 60%;/* App development and iot consulting*/
+        transform: translate(-25%, -720%);
     }
 
     .service-node:nth-child(9) {
@@ -1744,6 +1744,7 @@
 
 /* Fourth new line */
 .line-576-4 {
+    height: 130px;
     left: 50%;
     top: 33%;
     transform: rotate(135deg) translate(-50%, -50%);
