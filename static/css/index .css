@@ -1539,18 +1539,54 @@
 
 /* Responsive Design for Small Screens (width <= 576px) */
 @media (max-width: 576px) {
+    #service5 .overlay h1 {
+        margin-top: 25px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 2px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: fadeInTitle 2s forwards;
+    }
+    
+#service5 .overlay p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    max-width: 800px;
+   
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+    animation-delay: 1s; /* Delay to make sure the text fades in after title */
+}
+
+/* Hero content */
+.hero-content {
+    margin-top: 73px;
+    margin-bottom: 170px;
+    color: rgb(251, 250, 246);
+    text-align: center;
+    position: relative; /* Ensures text appears above the overlay */
+    z-index: 1; /* Ensures the text stays above the overlay */
+}
+
     .diagram-container {
-        width: 400px;
-        height: 400px;
+        width: 320px;
+        height: 320px;
         position: relative;
-        margin: 45 auto;
+        margin: 55 auto;
         border-radius: 50%;
         padding: 5px 10px;
     }
 
     .center-logo {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         position: absolute;
         left: 50%;
         top: 53%;
@@ -1560,7 +1596,7 @@
 
     /* Service Nodes Positioned Dynamically */
     .service-node {
-        font-size: 12px;
+        font-size: 8px;
         width: 80px;
         height: auto;
         text-align: center;
@@ -1569,12 +1605,12 @@
     }
 
     .service-node1 {
-        font-size: 12px;  /* Ensure consistency with other nodes */
-        width: 160px; /* Adjust width to accommodate longer text */
+        font-size: 8px;  /* Ensure consistency with other nodes */
+        width: 130px; /* Adjust width to accommodate longer text */
         height: auto;
         text-align: center;
         position: absolute;
-        transform: translate(35%, -81%); /* Same alignment for consistency */
+        transform: translate(30%, -400%); /* Same alignment for consistency */
         right: 250px; /* Position the node from the right side */
         top: 420px;   /* Position the node from the top */
     }
@@ -1583,55 +1619,55 @@
     .service-node:nth-child(1) {
         left: 0%;
         top: 50%; /* Top-center node */
-        transform: translate(-70%, -30%);
+        transform: translate(-80%, 80%);
     }
 
     .service-node:nth-child(2) {
         left: 70%;
         top: 10%;
-        transform: translate(-40%, -65%);
+        transform: translate(-55%, -145%);  /*Db/MW/ ADmin and transforming your Grc*/
     }
 
     .service-node:nth-child(3) {
         left: 55%;
         top: 25%;
-        transform: translate(-80%, -110%);
+        transform: translate(-110%, -250%); /*On prem and block chain*/
     }
 
     .service-node:nth-child(4) {
         left: 90%;
         top: 50%;
-        transform: translate(-110%, -130%);
+        transform: translate(-135%, -400%); /*It Recruit and share point*/
     }
 
     .service-node:nth-child(5) {
         left: 10%;
         top: 75%;
-        transform: translate(-75%, -180%);
+        transform: translate(-100%, -490%); /*ecosystem and compliance with sam */
     }
 
     .service-node:nth-child(6) {
         left: 70%;
         top: 90%;
-        transform: translate(-40%, -190%);
+        transform: translate(-60%, -490%);/*connect and integrate with ai*/
     }
 
     .service-node:nth-child(7) {
         left: 0%;
-        top: 95%; /* Bottom-center node  tooling stamping*/
-        transform: translate(-20%, -130%);
+        top: 95%; /* Bottom-center node  tooling stamping and team set up*/
+        transform: translate(-25%, 30%);
     }
 
     .service-node:nth-child(8) {
         left: 0%;
-        top: 90%;/* App development*/
-        transform: translate(-25%, -120%);
+        top: 50%;/* App development and iot consulting*/
+        transform: translate(-25%, -690%);
     }
 
     .service-node:nth-child(9) {
         left: 55%;
         top: 75%;
-        transform: translate(-20%, -70%);
+        transform: translate(-40%, 45%); /*composable e commerce*/
     }
 
     .service-node:nth-child(10) {
@@ -1679,8 +1715,8 @@
 .line-576 {
     position: absolute;
     display: block;
-    width: 2px;
-    height: 190px; /* Shorter lines for small screens */
+    width: 1.5px;
+    height: 149px; /* Shorter lines for small screens */
     background-color: #1a176d;
     z-index: 0;
 }
@@ -1740,6 +1776,7 @@
     top: 35%;
     transform: rotate(315deg) translate(-50%, -50%);
 }
+
 }
 
 
